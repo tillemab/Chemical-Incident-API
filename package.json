@@ -1,0 +1,38 @@
+{
+  "name": "chemical-incident-api",
+  "version": "1.0.0",
+  "description": "US Chemical Incident Express API",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --timeout 10000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tillemab/Chemical-Incident-API.git"
+  },
+  "author": "Braden Tillema",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tillemab/Chemical-Incident-API/issues"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mangodb": "^1.0.0",
+    "mongoose": "^8.10.1",
+    "passport": "^0.7.0",
+    "passport-http": "^0.3.0",
+    "passport-jwt": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.8.2"
+  }
+}
