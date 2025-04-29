@@ -16,6 +16,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(passport.initialize());
 
+// Middleware to log usage
+app.use(function (req, res, next) {
+    const date = new Date;
+    console.log(`[${date.toLocaleString("en-US", { timeZone: "America/Denver" })}] ${req.method} ${req.path}`)
+    next();
+})
+
 // Define Routes
 app.use('/signup', signup);
 app.use('/signin', signin);
