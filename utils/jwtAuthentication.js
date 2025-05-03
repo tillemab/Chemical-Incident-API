@@ -1,7 +1,7 @@
 const passport = require('passport');
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
-const User = require('./collection/Users');
+const User = require('../collection/Users');
 
 var opts = {};
 opts.jwtFromRequest = ExtractJWT.fromAuthHeaderWithScheme("jwt");

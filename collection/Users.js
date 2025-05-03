@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
         required: [true, "You must provide a password."],
         select: false
     },
-    admin: {
+    isAdmin: {
         type: Boolean,
         default: false
     }
