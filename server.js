@@ -6,6 +6,7 @@ const passport = require('passport');
 const signup = require('./route/signup');
 const signin = require('./route/signin');
 const incidents = require('./route/incidents');
+const admin = require('./route/admin');
 
 // Initialize Express Application
 const app = express();
@@ -27,6 +28,7 @@ app.use(function (req, res, next) {
 app.use('/signup', signup);
 app.use('/signin', signin);
 app.use('/incidents', incidents); 
+app.use('/admin', admin); 
 app.use('/', express.Router());
 
 const PORT = process.env.PORT || 8080;
