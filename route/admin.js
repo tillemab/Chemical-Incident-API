@@ -25,7 +25,7 @@ router.get('/incidents', authJWTController.isAuthenticated, async (req, res) => 
                 companyName: 1,
                 facilityCity: 1, 
                 facilityState: 1, 
-                wasDeath: 1, 
+                wasFatality: 1, 
                 wasSeriousInjury: 1, 
                 wasSubstantialPropertyDamage: 1, 
                 reportURL: 1
