@@ -5,9 +5,9 @@ const User = require('../collection/Users');
 router.post('/', async (req, res) => {
     
     // Check that the request body has an email, username, and password
-    if (!req.body.email) return res.status({success: false, message: 'The request body must contain an email.'}); // 400 Bad Request
-    if (!req.body.username) return res.status({success: false, message: 'The request body must contain a username.'}); // 400 Bad Request
-    if (!req.body.password) return res.status({success: false, message: 'The request body must contain a password.'}); // 400 Bad Request
+    if (!req.body.email) return res.status(400).json({success: false, message: 'The request body must contain an email.'}); // 400 Bad Request
+    if (!req.body.username) return res.status(400).json({success: false, message: 'The request body must contain a username.'}); // 400 Bad Request
+    if (!req.body.password) return res.status(400).json({success: false, message: 'The request body must contain a password.'}); // 400 Bad Request
 
     const user = new User({
         email: req.body.email, 
